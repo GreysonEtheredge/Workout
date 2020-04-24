@@ -14,9 +14,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageButton chest = (ImageButton) findViewById(R.id.imageButton2);
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
-        ImageButton legs = (ImageButton) findViewById(R.id.imageButton3);
+        ImageButton chest = (ImageButton) findViewById(R.id.chestButton);
+        ImageButton back = (ImageButton) findViewById(R.id.backButton);
+        ImageButton legs = (ImageButton) findViewById(R.id.legsButton);
 
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
