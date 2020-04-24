@@ -2,11 +2,12 @@ package com.example.workout;
 
 import android.os.Bundle;
 import android.util.DisplayMetrics;
+import android.widget.NumberPicker;
 
 public class pop extends MainActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        NumberPicker exercises = null;
         setContentView(R.layout.chestpopup);
 
         DisplayMetrics dm = new DisplayMetrics();
