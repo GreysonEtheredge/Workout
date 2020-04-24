@@ -19,10 +19,7 @@ public class pop extends MainActivity {
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
-        int width = dm.widthPixels;
-        int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width * 0.4), (int)(height * 0.4));
 
         editText3 = (EditText) findViewById(R.id.editText3);
         submitButton = (Button) findViewById(R.id.submitButton);
