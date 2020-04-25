@@ -31,10 +31,10 @@ public class pop extends MainActivity {
                 if (getIntent().getIntExtra("type", 0) == 1) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
-                if (extype == 2) {
+                if (getIntent().getIntExtra("type", 0) == 2) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
-                if (extype == 3) {
+                if (getIntent().getIntExtra("type", 0) == 3) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
             }
