@@ -21,7 +21,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 extype = 1;
-                startActivity(new Intent(MainActivity.this,pop.class));
+                Intent popup = new Intent(MainActivity.this,pop.class);
+                popup.putExtra("type", extype);
+                startActivity(popup);
             }
         });
         back.setOnClickListener(new View.OnClickListener() {

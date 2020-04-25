@@ -28,7 +28,7 @@ public class pop extends MainActivity {
             @Override
             public void onClick(View view) {
                 exerciseNumber = Integer.valueOf(editText3.getText().toString());
-                if (extype == 1) {
+                if (getIntent().getIntExtra("type", 0) == 1) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
                 if (extype == 2) {
