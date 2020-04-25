@@ -1,5 +1,6 @@
 package com.example.workout;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.view.View;
@@ -27,6 +28,15 @@ public class pop extends MainActivity {
             @Override
             public void onClick(View view) {
                 exerciseNumber = Integer.valueOf(editText3.getText().toString());
+                if (type == 1) {
+                    startActivity(new Intent(pop.this,ChestExercises.class));
+                }
+                if (type == 2) {
+                    startActivity(new Intent(pop.this,ChestExercises.class));
+                }
+                if (type == 3) {
+                    startActivity(new Intent(pop.this,ChestExercises.class));
+                }
             }
         });
     }
