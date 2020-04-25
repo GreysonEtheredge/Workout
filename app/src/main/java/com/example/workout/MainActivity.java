@@ -30,14 +30,18 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 extype = 2;
-                startActivity(new Intent(MainActivity.this, pop.class));
+                Intent popup = new Intent(MainActivity.this,pop.class);
+                popup.putExtra("type", extype);
+                startActivity(popup);
             }
         });
         legs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 extype = 3;
-                startActivity(new Intent(MainActivity.this,pop.class));
+                Intent popup = new Intent(MainActivity.this,pop.class);
+                popup.putExtra("type", extype);
+                startActivity(popup);
             }
         });
     }
