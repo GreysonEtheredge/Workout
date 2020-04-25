@@ -28,13 +28,13 @@ public class pop extends MainActivity {
             @Override
             public void onClick(View view) {
                 exerciseNumber = Integer.valueOf(editText3.getText().toString());
-                if (type == 1) {
+                if (extype == 1) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
-                if (type == 2) {
+                if (extype == 2) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
-                if (type == 3) {
+                if (extype == 3) {
                     startActivity(new Intent(pop.this,ChestExercises.class));
                 }
             }

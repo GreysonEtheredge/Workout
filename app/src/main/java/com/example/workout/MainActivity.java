@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends AppCompatActivity {
-    public int type = 0;
+    public int extype = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,21 +20,21 @@ public class MainActivity extends AppCompatActivity {
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                type = 1;
+                extype = 1;
                 startActivity(new Intent(MainActivity.this,pop.class));
             }
         });
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                type = 2;
-                startActivity(new Intent(MainActivity.this,pop.class));
+                extype = 2;
+                startActivity(new Intent(MainActivity.this, pop.class));
             }
         });
         legs.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                type = 3;
+                extype = 3;
                 startActivity(new Intent(MainActivity.this,pop.class));
             }
         });
