@@ -17,6 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".pop"></activity>
+        <activity android:name=".ChestExercises"></activity>
+        <activity android:name=".BackExercises"></activity>
+        <activity android:name=".LegExercises"></activity>
     </application>
 
 </manifest>
