@@ -20,6 +20,7 @@
         <activity android:name=".ChestExercises"></activity>
         <activity android:name=".BackExercises"></activity>
         <activity android:name=".LegExercises"></activity>
+        <receiver android:name=".RemindBroadcast"></receiver>
     </application>
 
 </manifest>
