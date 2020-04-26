@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         ImageButton chest = (ImageButton) findViewById(R.id.imageButton2);
         ImageButton back = (ImageButton) findViewById(R.id.imageButton);
         ImageButton legs = (ImageButton) findViewById(R.id.imageButton3);
-        Button button = (Button) findViewById(R.id.button);
+        Button button = (Button) findViewById(R.id.button2);
         createNotificationChannel();
 
         chest.setOnClickListener(new View.OnClickListener() {
