@@ -10,7 +10,7 @@ import android.widget.EditText;
 public class pop extends MainActivity {
 
     EditText editText3;
-    int exerciseNumber = 0;
+    public int exerciseNumber = 0;
     Button submitButton;
 
     protected void onCreate(Bundle savedInstanceState) {
