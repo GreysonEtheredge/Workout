@@ -8,9 +8,11 @@ import android.app.AlarmManager;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -25,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
         ImageButton chest = (ImageButton) findViewById(R.id.imageButton2);
         ImageButton back = (ImageButton) findViewById(R.id.imageButton);
         ImageButton legs = (ImageButton) findViewById(R.id.imageButton3);
-        Button button = (Button) findViewById(R.id.button2);
         createNotificationChannel();
+        Button button = (Button) findViewById(R.id.button2);
 
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +70,18 @@ public class MainActivity extends AppCompatActivity {
                 long tenSeconds = 1000 * 10;
 
                 alarmManager.set(AlarmManager.RTC_WAKEUP, timeAtButtonClick + tenSeconds, pendingIntent);
+                /*
+                AlarmManager alarmMgr;
+                PendingIntent alarmIntent;
+                alarmMgr = (AlarmManager)getSystemService(Context.ALARM_SERVICE);
+                Intent intent = new Intent(MainActivity.this, RemindBroadcast.class);
+                alarmIntent = PendingIntent.getBroadcast(MainActivity.this, 0, intent, 0);
+
+                alarmMgr.set(AlarmManager.ELAPSED_REALTIME_WAKEUP,
+                        SystemClock.elapsedRealtime() +
+                                10 * 1000, alarmIntent);
+
+                 */
             }
         });
     }
@@ -76,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             CharSequence name = "reminderChannel";
             String description = "channel";
             int importance = NotificationManagerCompat.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("motify", name, NotificationManager.IMPORTANCE_DEFAULT);
+            NotificationChannel channel = new NotificationChannel("notifyworkout", name, NotificationManager.IMPORTANCE_DEFAULT);
             channel.setDescription(description);
 
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
