@@ -16,28 +16,28 @@ public class ChestExercises extends pop {
         TextView textView5 = (TextView) findViewById(R.id.textView5);
         TextView textView6 = (TextView) findViewById(R.id.textView6);
         TextView textView7 = (TextView) findViewById(R.id.textView7);
-        if (exerciseNumber == 0) {
+        if (getIntent().getIntExtra("num", 0) == 0) {
             textView7.setVisibility(View.INVISIBLE);
             textView6.setVisibility(View.INVISIBLE);
             textView5.setVisibility(View.INVISIBLE);
             textView4.setVisibility(View.INVISIBLE);
         }
-        if (exerciseNumber == 1) {
+        if (getIntent().getIntExtra("num", 0) == 1) {
             textView7.setVisibility(View.INVISIBLE);
             textView6.setVisibility(View.INVISIBLE);
             textView5.setVisibility(View.INVISIBLE);
             textView4.setVisibility(View.INVISIBLE);
         }
-        if (exerciseNumber == 2) {
+        if (getIntent().getIntExtra("num", 0) == 2) {
             textView7.setVisibility(View.INVISIBLE);
             textView6.setVisibility(View.INVISIBLE);
             textView5.setVisibility(View.INVISIBLE);
         }
-        if (exerciseNumber == 3) {
+        if (getIntent().getIntExtra("num", 0) == 3) {
             textView7.setVisibility(View.INVISIBLE);
             textView6.setVisibility(View.INVISIBLE);
         }
-        if (exerciseNumber == 4) {
+        if (getIntent().getIntExtra("num", 0) == 4) {
             textView7.setVisibility(View.INVISIBLE);
         }
     }

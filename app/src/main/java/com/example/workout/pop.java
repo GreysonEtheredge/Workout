@@ -29,13 +29,22 @@ public class pop extends MainActivity {
             public void onClick(View view) {
                 exerciseNumber = Integer.valueOf(editText3.getText().toString());
                 if (getIntent().getIntExtra("type", 0) == 1) {
-                    startActivity(new Intent(pop.this,ChestExercises.class));
+                    Intent popup = new Intent(pop.this,ChestExercises.class);
+                    popup.putExtra("num", exerciseNumber);
+                    startActivity(popup);
+                    //startActivity(new Intent(pop.this,ChestExercises.class));
                 }
                 if (getIntent().getIntExtra("type", 0) == 2) {
-                    startActivity(new Intent(pop.this,BackExercises.class));
+                    Intent popup = new Intent(pop.this,BackExercises.class);
+                    popup.putExtra("num", exerciseNumber);
+                    startActivity(popup);
+                    //startActivity(new Intent(pop.this,BackExercises.class));
                 }
                 if (getIntent().getIntExtra("type", 0) == 3) {
-                    startActivity(new Intent(pop.this,LegExercises.class));
+                    Intent popup = new Intent(pop.this,LegExercises.class);
+                    popup.putExtra("num", exerciseNumber);
+                    startActivity(popup);
+                    //startActivity(new Intent(pop.this,LegExercises.class));
                 }
             }
         });
