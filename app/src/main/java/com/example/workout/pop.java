@@ -6,10 +6,12 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class pop extends MainActivity {
 
     EditText editText3;
+    TextView textView8;
     public int exerciseNumber = 0;
     Button submitButton;
 
@@ -23,6 +25,7 @@ public class pop extends MainActivity {
 
 
         editText3 = (EditText) findViewById(R.id.editText3);
+        textView8 = (TextView) findViewById(R.id.textView8);
         submitButton = (Button) findViewById(R.id.submitButton);
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override

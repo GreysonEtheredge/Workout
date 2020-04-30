@@ -16,6 +16,7 @@ import android.os.SystemClock;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,11 +25,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        ImageButton chest = (ImageButton) findViewById(R.id.imageButton2);
-        ImageButton back = (ImageButton) findViewById(R.id.imageButton);
-        ImageButton legs = (ImageButton) findViewById(R.id.imageButton3);
+        TextView quarWorkout = (TextView) findViewById(R.id.quarWorkout);
+        ImageButton chest = (ImageButton) findViewById(R.id.chestButton);
+        ImageButton back = (ImageButton) findViewById(R.id.backButton);
+        ImageButton legs = (ImageButton) findViewById(R.id.legsButton);
         createNotificationChannel();
-        Button button = (Button) findViewById(R.id.button2);
+        Button alarm = (Button) findViewById(R.id.alarmButton);
 
         chest.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(popup);
             }
         });
-        button.setOnClickListener(new View.OnClickListener() {
+        alarm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Toast.makeText(MainActivity.this, "Reminder Set!", Toast.LENGTH_SHORT).show();
